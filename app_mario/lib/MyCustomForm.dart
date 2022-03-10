@@ -10,6 +10,7 @@ class MyCustomForm extends StatefulWidget {
 }
 
 class MyCustomFormState extends State<MyCustomForm> {
+  final myController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,6 @@ class MyCustomFormState extends State<MyCustomForm> {
           TextFormField(
             decoration: InputDecoration(
               border: OutlineInputBorder(),
-              iconColor: Color.fromARGB(255, 231, 231, 225),
               hintText: 'ingrese la contraseña ',
             ),
             validator: (value) {
@@ -60,6 +60,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                 }
               },
               child: const Text('login'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+              ),
             ),
           ),
         ],
