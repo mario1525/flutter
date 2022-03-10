@@ -13,7 +13,6 @@ class MyCustomFormState extends State<MyCustomForm> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    // Build a Form widget using the _formKey created above.
     return Form(
       key: _formKey,
       child: Column(
@@ -22,12 +21,13 @@ class MyCustomFormState extends State<MyCustomForm> {
             alignment: Alignment.center,
             margin: new EdgeInsets.symmetric(vertical: 120.0),
           ),
+          //primer cuadro de texto
           TextFormField(
             decoration: InputDecoration(
+              iconColor: Color.fromARGB(255, 231, 231, 225),
               border: OutlineInputBorder(),
               hintText: 'ingrese su correo',
             ),
-            // The validator receives the text that the user has entered.
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter some text';
@@ -35,12 +35,13 @@ class MyCustomFormState extends State<MyCustomForm> {
               return null;
             },
           ),
+          //segundo cuadro de texto
           TextFormField(
             decoration: InputDecoration(
               border: OutlineInputBorder(),
+              iconColor: Color.fromARGB(255, 231, 231, 225),
               hintText: 'ingrese la contraseña ',
             ),
-            // The validator receives the text that the user has entered.
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter some text';

@@ -14,7 +14,7 @@ class myapp extends StatelessWidget {
         body: new Stack(
           children: [MyCustomForm()],
         ),
-        backgroundColor: Color.fromARGB(255, 3, 39, 68),
+        backgroundColor: Color.fromARGB(255, 3, 128, 230),
       ),
     );
   }
