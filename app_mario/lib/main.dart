@@ -11,7 +11,7 @@ class myapp extends StatelessWidget {
     return MaterialApp(
       title: 'login',
       home: Scaffold(
-        body: new Stack(
+        body: Stack(
           children: [MyCustomForm()],
         ),
         backgroundColor: Color.fromARGB(255, 3, 128, 230),

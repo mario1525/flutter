@@ -20,7 +20,7 @@ class MyCustomFormState extends State<MyCustomForm> {
         children: <Widget>[
           Container(
             alignment: Alignment.center,
-            margin: new EdgeInsets.symmetric(vertical: 120.0),
+            margin: EdgeInsets.symmetric(vertical: 120.0),
           ),
           //primer cuadro de texto
           TextFormField(
