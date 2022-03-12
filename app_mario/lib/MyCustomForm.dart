@@ -69,4 +69,9 @@ class MyCustomFormState extends State<MyCustomForm> {
       ),
     );
   }
+
+  void dispose() {
+    myController.dispose();
+    super.dispose();
+  }
 }
