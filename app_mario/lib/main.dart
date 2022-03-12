@@ -9,9 +9,9 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'login',
+      title: 'home',
       home: Scaffold(
-        body: new Stack(
+        body: Stack(
           children: [MyCustomForm()],
         ),
         backgroundColor: Color.fromARGB(255, 3, 128, 230),
