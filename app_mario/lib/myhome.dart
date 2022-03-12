@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class myHome extends StatefulWidget {
-  const myHome({Key? key}) : super(key: key);
+
+
+class myhome extends StatefulWidget {
+  const myhome({Key? key}) : super(key: key);
 
   @override
   myHomePage createState() {
@@ -9,9 +11,27 @@ class myHome extends StatefulWidget {
   }
 }
 
-class myHomePage extends State<myHome> {
+class myHomePage extends State<myhome> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title: 'hello',
+      home: Scaffold(
+        appBar: AppBar(
+          
+        ),
+        body: Stack(
+          children: <Widget>[
+            const Center(child: CircularProgressIndicator()),
+            Center(
+              child: FadeInImage.memoryNetwork( 
+                placeholder: ,               
+                image: 'assets/hello.gif',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
