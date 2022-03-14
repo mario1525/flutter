@@ -9,6 +9,7 @@ class MyCustomForm extends StatefulWidget {
   }
 }
 
+// este es el codigo de la pagina de login
 class MyCustomFormState extends State<MyCustomForm> {
   final myController = TextEditingController();
   final _formKey = GlobalKey<FormState>();

@@ -2,6 +2,7 @@ import 'package:app_mario/myhome.dart';
 import 'package:flutter/material.dart';
 import 'MyCustomForm.dart';
 import 'myhome.dart';
+import 'mysingUp.dart';
 
 void main() {
   runApp(myapp());
@@ -16,7 +17,6 @@ class myapp extends StatelessWidget {
         body: Stack(
           children: [myhome()],
         ),
-        backgroundColor: Color.fromARGB(255, 238, 241, 243),
       ),
     );
   }
