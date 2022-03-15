@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:app_mario/myhome.dart';
 
-class MyCustomForm extends StatefulWidget {
-  const MyCustomForm({Key? key}) : super(key: key);
-
-  @override
-  MyCustomFormState createState() {
-    return MyCustomFormState();
-  }
-}
-
-// este es el codigo de la pagina de login
-class MyCustomFormState extends State<MyCustomForm> {
+class MyCustomForm extends StatelessWidget {
   final myController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  MyCustomForm({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -21,7 +15,7 @@ class MyCustomFormState extends State<MyCustomForm> {
         children: <Widget>[
           Container(
             alignment: Alignment.center,
-            margin: new EdgeInsets.symmetric(vertical: 120.0),
+            margin: EdgeInsets.symmetric(vertical: 120.0),
           ),
           //primer cuadro de texto
           TextFormField(
@@ -66,13 +60,17 @@ class MyCustomFormState extends State<MyCustomForm> {
               ),
             ),
           ),
+          //boton para volver a el home
+          const SizedBox(height: 10),
+          CupertinoButton.filled(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('home'),
+            disabledColor: Color.fromARGB(246, 3, 3, 70),
+          ),
         ],
       ),
     );
-  }
-
-  void dispose() {
-    myController.dispose();
-    super.dispose();
   }
 }

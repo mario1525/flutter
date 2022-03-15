@@ -5,19 +5,16 @@ import 'myhome.dart';
 import 'mysingUp.dart';
 
 void main() {
-  runApp(myapp());
-}
-
-class myapp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'home',
-      home: Scaffold(
-        body: Stack(
-          children: [myhome()],
-        ),
-      ),
-    );
-  }
+  runApp(MaterialApp(
+    title: 'rutas ',
+    // Start the app with the "/" named route. In this case, the app starts
+    // on the FirstScreen widget.
+    initialRoute: '/second',
+    routes: {
+      // When navigating to the "/" route, build the FirstScreen widget.
+      '/': (context) => const myhome(),
+      // When navigating to the "/second" route, build the SecondScreen widget.
+      '/second': (context) => MyCustomForm(),
+    },
+  ));
 }
