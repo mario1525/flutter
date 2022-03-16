@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:app_mario/myhome.dart';
 
-class MyCustomForm extends StatelessWidget {
-  final myController = TextEditingController();
-  final _formKey = GlobalKey<FormState>();
+class MyCustomForm extends StatefulWidget {
   MyCustomForm({Key? key}) : super(key: key);
 
+  State<MyCustomForm> createState() => MyCustom();
+}
+
+class MyCustom extends State<MyCustomForm> {
+  final myController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Form(

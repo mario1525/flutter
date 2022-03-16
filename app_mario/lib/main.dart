@@ -9,12 +9,11 @@ void main() {
     title: 'rutas ',
     // Start the app with the "/" named route. In this case, the app starts
     // on the FirstScreen widget.
-    initialRoute: '/second',
+    initialRoute: '/',
     routes: {
-      // When navigating to the "/" route, build the FirstScreen widget.
       '/': (context) => const myhome(),
-      // When navigating to the "/second" route, build the SecondScreen widget.
-      '/second': (context) => MyCustomForm(),
+      '/singIn': (context) => MyCustomForm(),
+      '/singUp': (context) => mysingUp(),
     },
   ));
 }
