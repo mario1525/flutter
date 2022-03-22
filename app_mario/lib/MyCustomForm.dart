@@ -16,19 +16,17 @@ class MyCustom extends State<MyCustomForm> {
         child: Stack(
           children: <Widget>[
             backgraund(),
-            CupertinoTextField(
-              decoration: BoxDecoration(
-                border: Border.all(),
-              ),
-            ),
+            CupertinoTextField(),
             //boton de navegacion
-            const SizedBox(height: 30),
-            CupertinoButton.filled(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text('home'),
-              disabledColor: Color.fromARGB(246, 26, 26, 247),
+            Positioned(
+              bottom: 375,
+              left: 125,
+              child: CupertinoButton.filled(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('home'),
+              ),
             ),
           ],
         ),

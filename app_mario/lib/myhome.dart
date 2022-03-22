@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'backgraund.dart';
 
 // este es el codigo de la pagina de inicio
@@ -10,19 +11,27 @@ class myhome extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             backgraund(),
-            const SizedBox(height: 30),
-            CupertinoButton.filled(
-              onPressed: () {
-                Navigator.pushNamed(context, '/singIn');
-              },
-              child: const Text('sing in'),
+            Positioned(
+              bottom: 280.0,
+              left: 125,
+              child: CupertinoButton.filled(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/singIn');
+                },
+                child: const Text('sing in'),
+                alignment: Alignment.center,
+              ),
             ),
-            const SizedBox(height: 30),
-            CupertinoButton.filled(
-              onPressed: () {
-                Navigator.pushNamed(context, '/singUp');
-              },
-              child: const Text('sing up'),
+            Positioned(
+              bottom: 180.2,
+              left: 125,
+              child: CupertinoButton.filled(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/singUp');
+                },
+                child: const Text('sing up'),
+                alignment: Alignment.center,
+              ),
             ),
           ],
         ),
