@@ -16,17 +16,19 @@ class MyCustom extends State<MyCustomForm> {
         child: Stack(
           children: <Widget>[
             backgraund(),
-            CupertinoTextField(),
             //boton de navegacion
             Positioned(
-              bottom: 375,
-              left: 125,
+              bottom: 750,
+              left: -10,
               child: CupertinoButton.filled(
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 child: const Text('home'),
               ),
+            ),
+            Positioned(
+              child: CupertinoTextField(),
             ),
           ],
         ),

@@ -10,7 +10,7 @@ class myhome extends StatelessWidget {
       child: Center(
         child: Stack(
           children: <Widget>[
-            backgraund(),
+            fondHome(),
             Positioned(
               bottom: 280.0,
               left: 125,
@@ -34,6 +34,24 @@ class myhome extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class fondHome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(255, 3, 255, 255),
+            Color.fromARGB(193, 62, 24, 231),
+          ],
+          begin: FractionalOffset(1.0, 0.1),
+          end: FractionalOffset(1.0, 0.1),
         ),
       ),
     );

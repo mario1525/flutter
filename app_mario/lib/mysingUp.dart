@@ -13,20 +13,17 @@ class mysinUpapp extends State<mysingUp> {
     return Stack(
       children: <Widget>[
         backgraund(),
-
-        CupertinoTextField(
-          decoration: BoxDecoration(
-            border: Border.all(),
-          ),
-        ),
         //boton de navegacion
-        const SizedBox(height: 30),
-        CupertinoButton.filled(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('home'),
-        ),
+        Positioned(
+          bottom: 375,
+          left: 125,
+          child: CupertinoButton.filled(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('home'),
+          ),
+        )
       ],
     );
   }
