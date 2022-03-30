@@ -1,4 +1,4 @@
-import 'package:app_mario/backgraund.dart';
+import 'package:app_mario/widget/backgraund.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'backgraund.dart';

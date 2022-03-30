@@ -1,8 +1,8 @@
-import 'package:app_mario/myhome.dart';
+import 'package:app_mario/widget/myhome.dart';
 import 'package:flutter/material.dart';
-import 'mysingIn.dart';
-import 'myhome.dart';
-import 'mysingUp.dart';
+import 'widget/mysingIn.dart';
+import 'widget/myhome.dart';
+import 'widget/mysingUp.dart';
 
 void main() {
   runApp(MaterialApp(
