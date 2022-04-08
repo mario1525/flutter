@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'package:app_mario/widget/backgraund.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +18,8 @@ class MyCustom extends State<MyCustomForm> {
         //boton de navegacion
         Positioned(
           bottom: 780,
-          left: -40,
+          left: -20,
+          width: MediaQuery.of(context).size.width * 0.3,
           child: CupertinoButton.filled(
             onPressed: () {
               Navigator.pop(context);
@@ -38,6 +38,7 @@ class MyCustom extends State<MyCustomForm> {
           ),
         ),
         Positioned(
+          bottom: 340,
           child: form(),
         ),
       ],
@@ -58,7 +59,7 @@ class form extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width * 0.7,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 15),
             margin: const EdgeInsets.symmetric(horizontal: 15),
@@ -67,7 +68,7 @@ class form extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 30,
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.7,
@@ -80,6 +81,15 @@ class form extends StatelessWidget {
               style: const TextStyle(fontSize: 22),
             ),
           ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            child: CupertinoButton.filled(
+              onPressed: () {},
+              child: const Text('login'),
+            ),
+          )
         ],
       ),
     );

@@ -35,7 +35,18 @@ class mysinUpapp extends State<mysingUp> {
             color: Color.fromARGB(255, 215, 216, 216),
           ),
         ),
-        Positioned(child: form()),
+        Positioned(
+          bottom: 350,
+          child: form(),
+        ),
+        Positioned(
+          left: 120,
+          bottom: 260,
+          child: CupertinoButton.filled(
+            onPressed: () {},
+            child: const Text('login'),
+          ),
+        ),
       ],
     );
   }
@@ -73,7 +84,7 @@ class form extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: CupertinoTextField(
-              style: const TextStyle(fontSize: 22),
+              style: TextStyle(fontSize: 22),
             ),
           ),
           SizedBox(
